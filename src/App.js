@@ -1,14 +1,24 @@
 import React from "react";
-import Heading from "./component/Heading";
-import Para from "./component/Para";
-import List from "./component/List";
+import Cards from './component/Cards';
+import Sdata from "./Sdata";
+const ncard= (val,ind,arr)=>{
+  console.log(val);
+  return(
+  <Cards
+    key={val.id}
+   imgSrc={val.imgSrc} 
+      title={val.title} 
+      sname={val.sname} 
+      links={val.links} />
+  
+  );
+}
 
 function App() {
   return (
     <>
-    <Heading />
-    <Para/>
-    <List/>
+    <h1 className="">List of top 5 Netflix series</h1>    
+    {Sdata.map( ncard)}
     </>
   );
 }

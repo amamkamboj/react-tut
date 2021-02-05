@@ -1,8 +1,8 @@
 import React from "react";
 
-function Heading(){
+function Heading(props){
 return(
-    <h1>My name is Aman</h1>
+    <h3 className='card_title'>{props.sname}</h3>
 )
 
 }
