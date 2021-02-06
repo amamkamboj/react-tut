@@ -1,24 +1,31 @@
 import React from "react";
-import Cards from './component/Cards';
-import Sdata from "./Sdata";
-const ncard= (val,ind,arr)=>{
-  console.log(val);
-  return(
-  <Cards
-    key={val.id}
-   imgSrc={val.imgSrc} 
-      title={val.title} 
-      sname={val.sname} 
-      links={val.links} />
-  
-  );
+
+import Netflix from "./component/Netflix";
+import Amazon from "./component/Amazon";
+const favSeries = 'netflix';
+
+const FavS = ()=>{
+  if(favSeries==='netflix'){
+    return(
+      <Netflix />
+      );
+  }
+  else{
+    return(
+      <Amazon />  
+      );
+  }
+
 }
+
+
+
 
 function App() {
   return (
     <>
     <h1 className="">List of top 5 Netflix series</h1>    
-    {Sdata.map( ncard)}
+    <FavS/>
     </>
   );
 }
