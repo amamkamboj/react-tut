@@ -24,7 +24,7 @@ const Sdata=[
         id:4,
         sname:"Lommbock",
         imgSrc:"https://occ-0-4189-3646.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABaPFo4_ugvQ-TzX2iCjTpWGA1DuoNN4Nvxo0KMQdQayP25dXsxlNZi5fEV2UFlLtXDtZqhLXzsaP-8YqhM0_8EcLJLeS.jpg?r=48c",
-        title:"A Netflix Original Series",
+        title:"Amazon Original Series",
         links:"https://www.netflix.com/in/title/80191219"
     },
     {
