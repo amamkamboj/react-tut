@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Netflix from "./component/Netflix";
 import Amazon from "./component/Amazon";
+import Form from "./component/Form";
 const favSeries = 'amazon';
 
 
@@ -59,6 +60,9 @@ const App = ()=>{
     <br/>
     <button onClick={UpdateBg} onDoubleClick={BgBack}>{setName}</button>
     </div>
+
+    <br></br>
+    <Form/>
     </>
   );
 }
