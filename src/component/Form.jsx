@@ -1,23 +1,34 @@
 import React, { useState } from "react";
 
 const Form = ()=>{
-    let uname="";
-    const [ intName, UpdateInput]=useState();
 
+    const [ uname, UpdateInput]=useState("");
+
+    const [lname,UpFullName] = useState("");
+    const [lastNameNew,SetLastName]=useState();
+    const [fullName,SetFullName]=useState(uname);
     const InputChange = (event)=>{
-        console.log(event.target.value);
-        uname=event.target.value;
-        //UpdateInput(event.target.value);
+       
+        UpdateInput(event.target.value);
     }
     const SubmitData = ()=>{
-        UpdateInput(uname);
-        
+
+        SetFullName(uname);
+        SetLastName(lname);
+    }
+    const SetLastNm=(event)=>{
+        UpFullName(event.target.value);
     }
     return(
         <>
         <div className="form">
-            <h1>Hello {intName}</h1>
-            <input type="text" placeholder="Enter Your name" onChange={InputChange}/>
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+            <h1>Hello {fullName} {lastNameNew}</h1>
+            <input type="text" placeholder="Enter Your name" onChange={InputChange} value={uname}/>
+            <br/>
+            <input type="text" placeholder="Enter Your last name" onChange={SetLastNm} value={lname}/>
+            <br />
             <button onClick={SubmitData}>Click me 👍</button>
         </div>
 
