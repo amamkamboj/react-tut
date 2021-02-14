@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import TodoList from "./component/TodoList";
 
-import RegForm from"./component/RegForm";
+import RegForm from"./component/TodoList";
 
 const App = ()=>{  
 
   return (
     <>
-    <RegForm/>
+    <TodoList/>
     </>
   );
 }
